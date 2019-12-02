@@ -1,0 +1,54 @@
+@import '../common/styles/variables';
+@import '../common/styles/fonts';
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: $font-family;
+    font-size: $font-size-m;
+    color: $font-color-dark;
+    letter-spacing: 1px;
+}
+
+*::selection {
+    background: $button;
+    color: $dodger-blue-a;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 25px;
+    font-weight: normal;
+}
+
+button {
+    font-family: $font-family;
+    letter-spacing: 0.5px;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: $font-size-xl;
+    line-height: $font-size-xl;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: $font-size-l;
+}
+
+h3 {
+    font-size: $font-size-l;
+}
+
+p {
+    margin: 0 0 25px;
+
+    &:last-child {
+        margin: 0;
+    }
+}

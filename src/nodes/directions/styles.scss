@@ -1,0 +1,27 @@
+@import '../../common/styles/variables';
+
+.directions {
+    background-color: $alto;
+    position: relative;
+    padding: 50px 0;
+}
+
+.content {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.features {
+    padding: 0;
+    margin: 0;
+    list-style: decimal-leading-zero inside;
+
+    .feature {
+        margin: 0;
+
+        &:not(:first-child) {
+            margin-top: 10px;
+        }
+    }
+}

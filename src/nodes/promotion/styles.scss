@@ -1,0 +1,66 @@
+@import '../../common/styles/variables';
+
+.promotion {
+    padding: 0;
+    height: $content-layout-height / 1.5;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+    .special {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        height: 26px;
+        background-color: $CTA-button;
+        padding: 0 13px;
+        border-radius: $rounding;
+        text-transform: uppercase;
+        font-size: $font-size-s;
+        line-height: 25px;
+        color: $CTA-button-content-color;
+        user-select: none;
+    }
+}
+
+.description {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 20px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+
+    h1 {
+        color: $font-color-dark;
+    }
+
+    p {
+        $line-height: 26px;
+
+        width: 100%;
+        text-align: center;
+        max-height: $line-height * 3;
+        color: $font-color-dark;
+        line-height: $line-height;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+
+    .controls {
+        width: 100%;
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.popup {
+    width: $content-layout-width;
+
+    .header {
+        margin: 0;
+    }
+}

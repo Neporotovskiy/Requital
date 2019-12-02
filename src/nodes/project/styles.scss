@@ -1,0 +1,34 @@
+@import '../../common/styles/variables';
+
+.project {
+    padding: 0;
+    height: $content-layout-height / 1.5;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+}
+
+.description {
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, transparent 0%, transparentize($dark, 0.1) 70%);
+    display: flex;
+    align-content: flex-end;
+    padding: 20px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+
+    h1 {
+        color: $font-color-light;
+    }
+
+    p {
+        $line-height: 26px;
+
+        color: $font-color-light;
+        line-height: $line-height;
+        max-height: $line-height * 3;
+        text-overflow: ellipsis;
+        overflow: hidden;
+    }
+}

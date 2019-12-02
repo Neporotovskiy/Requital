@@ -1,0 +1,88 @@
+@import '../../common/styles/variables';
+
+.container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+
+    .overlay {
+        width: 100%;
+        height: 100%;
+        background-color: transparentize($color: $emperor, $amount: 0.5);
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: -1;
+        backdrop-filter: blur(5px);
+    }
+
+    .popup {
+        max-width: $content-layout-width;
+        background: $white;
+        border-radius: $rounding;
+        box-shadow: $shadow;
+
+        .header {
+            min-height: 50px;
+            padding: 0 50px 0 25px;
+            display: flex;
+            justify-content: space-between;
+            border-bottom: 1px solid $alto;
+            position: relative;
+
+            .title {
+                margin: 8px 0;
+            }
+
+            .close {
+                width: 25px;
+                height: 25px;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: $rounding;
+                cursor: pointer;
+                position: absolute;
+                right: 12.5px;
+                top: 12.5px;
+
+                &::before,
+                &::after {
+                    content: '';
+                    width: 20px;
+                    height: 2px;
+                    background-color: $font-color-dark;
+                    border-radius: $rounding;
+                    position: absolute;
+                }
+
+                &::before {
+                    transform: rotateZ(45deg);
+                }
+
+                &::after {
+                    transform: rotateZ(-45deg);
+                }
+
+                &:hover {
+                    background: $alto;
+                }
+            }
+        }
+
+        .content {
+            padding: 25px;
+        }
+
+        .footer {
+            padding: 8px 25px;
+            border-top: 1px solid $alto;
+        }
+    }
+}

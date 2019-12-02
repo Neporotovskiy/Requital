@@ -1,0 +1,32 @@
+@import '../../common/styles/variables';
+
+.projects {
+    background-color: $alto;
+    padding: 50px 0;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .entity:nth-last-child(n + 3) {
+        margin-bottom: 25px;
+    }
+}
+
+.proposial {
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .proposial-description {
+        margin-right: 25px;
+    }
+
+    .proposial-button {
+        flex-shrink: 0;
+    }
+}

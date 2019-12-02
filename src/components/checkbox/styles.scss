@@ -1,0 +1,13 @@
+@import '../../common/styles/variables';
+
+.checkbox {
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    position: relative;
+    border: 1px solid $font-color-light;
+    border-radius: $rounding;
+    vertical-align: middle;
+    user-select: none;
+    cursor: pointer;
+}

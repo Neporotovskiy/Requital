@@ -1,0 +1,110 @@
+@import '../../../common/styles/variables';
+
+.wrapper {
+    background-color: $alto;
+    padding: 50px 0;
+}
+
+.description,
+.details,
+.order {
+    width: 100%;
+}
+
+.illustrations {
+    background-size: 100% auto;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: $dark;
+    overflow: hidden;
+
+    .filter {
+        width: 100%;
+        height: 100%;
+        padding: 50px 0;
+        background: transparentize($dark, 0.15);
+        backdrop-filter: blur(5px);
+        color: $font-color-light;
+    }
+
+    .content {
+        display: flex;
+        user-select: none;
+        transition: transform 300ms;
+    }
+
+    .illustration {
+        width: 499px;
+        height: calc(499px / 16 * 9);
+        border-radius: $rounding;
+        cursor: pointer;
+
+        &:not(:last-child) {
+            margin-right: 25px;
+        }
+    }
+
+    .pagination {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: 50px;
+
+        .pagination-button:not(:last-child) {
+            margin-right: 25px;
+        }
+    }
+}
+
+.details {
+    .section {
+        padding: 25px 0;
+
+        &:not(:last-child) {
+            border-bottom: 1px solid $font-color-light;
+        }
+
+        &:first-child {
+            padding-top: 0;
+        }
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+
+    .characteristic,
+    .option {
+        display: inline-block;
+        width: 50%;
+
+        .name {
+            margin-bottom: 5px;
+            text-transform: uppercase;
+
+            &::after {
+                content: ':';
+            }
+        }
+
+        &:nth-last-child(n + 3) {
+            margin-bottom: 25px;
+        }
+    }
+
+    .empty {
+        margin-bottom: 5px;
+        text-transform: uppercase;
+    }
+}
+
+.opened-illustration {
+    display: block;
+    width: $content-layout-width;
+    height: $content-layout-width / 16 * 9;
+}
+
+.popup-content {
+    width: 499px;
+    box-sizing: border-box;
+}

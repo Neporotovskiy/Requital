@@ -1,0 +1,47 @@
+@import '../../common/styles/variables';
+
+.field {
+    position: relative;
+
+    .input {
+        width: 100%;
+        height: 50px;
+        background: none;
+        border: 1px solid $alto;
+        padding: 10px 40px 10px 10px;
+        border-radius: $rounding;
+        box-sizing: border-box;
+        font-size: $font-size-m;
+
+        &:focus {
+            outline: none;
+            border-color: $dodger-blue-a;
+        }
+
+        &::placeholder {
+            color: $alto;
+        }
+
+        &.hasError {
+            border-color: $coral-red;
+
+            &:focus {
+                border-color: $coral-red;
+            }
+        }
+
+        &.hasSuccess {
+            border-color: $dodger-blue-a;
+
+            &:focus {
+                border-color: $dodger-blue-a;
+            }
+        }
+    }
+
+    .icon {
+        position: absolute;
+        right: 10px;
+        top: 15px;
+    }
+}

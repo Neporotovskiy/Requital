@@ -1,0 +1,48 @@
+// Atomic colors
+$black: #000;
+$white: #fff;
+$mine-shaft: #333;
+$alto: #ddd;
+$tundora: #444;
+$dove-gray: #666;
+$gallery: #f7f7f7;
+$emperor: #565555;
+$dodger-blue-a: #00adff;
+$dodger-blue-b: #36beff;
+$coral-red: #ff414c;
+
+// Font
+$font-family: 'Oswald', sans-serif;
+$font-size-s: 13px;
+$font-size-m: 18px;
+$font-size-l: 23px;
+$font-size-xl: 45px;
+$font-color-light: $alto;
+$font-color-light-hovered: $white;
+$font-color-dark: $black;
+$font-color-dark-hovered: $dove-gray;
+
+// Colors of elements
+$dark: $mine-shaft;
+$dark-accent: $tundora;
+$light: $white;
+$light-accent: $gallery;
+
+// Color of buttons
+$button: $emperor;
+$button-hovered: $emperor;
+$button-content-color: $font-color-light;
+$button-content-color-hovered: $font-color-light-hovered;
+$CTA-button: $dodger-blue-a;
+$CTA-button-hovered: $dodger-blue-b;
+$CTA-button-content-color: $font-color-light-hovered;
+$CTA-button-content-color-hovered: $font-color-light-hovered;
+
+// Shadow
+$shadow: 3px 3px 6px transparentize(black, 0.8);
+$radial-shadow: 0px 0px 6px transparentize(black, 0.8);
+
+// Sizes
+$content-layout-width: 1024px;
+$content-layout-height: 600px;
+$rounding: 3px;

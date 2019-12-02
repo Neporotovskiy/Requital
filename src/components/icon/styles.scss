@@ -1,0 +1,83 @@
+@import '../../common/styles/variables';
+
+.icon {
+    width: 20px;
+    height: 20px;
+    position: relative;
+
+    &.success,
+    &.error {
+        &:hover {
+            .tooltip {
+                display: block;
+            }
+        }
+
+        .tooltip {
+            width: 250px;
+            box-sizing: border-box;
+            background: $white;
+            box-shadow: $radial-shadow;
+            border-radius: $rounding;
+            padding: 10px;
+            position: absolute;
+            left: 50%;
+            bottom: 100%;
+            transform: translate(-50%, -10px);
+            font-size: $font-size-s;
+
+            &::before,
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 50%;
+                top: 100%;
+                transform: translateX(-50%);
+            }
+
+            &::before {
+                border: 12px solid transparent;
+                border-top-color: transparentize($dark-accent, 0.9);
+            }
+
+            &::after {
+                border: 10px solid transparent;
+                border-top-color: $white;
+            }
+        }
+    }
+
+    &.error {
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            background: $coral-red;
+            width: 15px;
+            height: 2px;
+        }
+
+        &::before {
+            transform: translate(3px, 9px) rotate(45deg);
+        }
+
+        &::after {
+            transform: translate(3px, 7px) rotate(-45deg);
+        }
+    }
+
+    &.success::after {
+        content: '';
+        display: block;
+        width: 12px;
+        height: 6px;
+        border-left: 2px solid $dodger-blue-a;
+        border-bottom: 2px solid $dodger-blue-a;
+        transform: translate(4px, 5px) rotate(-45deg);
+    }
+
+    &.with-tooltip {
+        cursor: help;
+    }
+}

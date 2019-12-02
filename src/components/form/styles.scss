@@ -1,0 +1,33 @@
+@import '../../common/styles/variables';
+
+.label {
+    display: inline-block;
+    margin-bottom: 10px;
+    line-height: $font-size-m;
+
+    &.required::after {
+        content: '*';
+        color: $coral-red;
+    }
+}
+
+.field:not(:last-child) {
+    margin-bottom: 20px;
+}
+
+.agreement,
+.submit {
+    margin-bottom: 15px;
+}
+
+.agreement {
+    display: flex;
+    align-items: center;
+    user-select: none;
+    font-size: $font-size-s;
+    cursor: default;
+
+    .checkbox {
+        margin-right: 10px;
+    }
+}

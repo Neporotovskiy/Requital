@@ -1,0 +1,61 @@
+@import '../../common/styles/variables';
+
+.contacts {
+    background-color: $alto;
+    padding: 50px 0;
+
+    .wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .label {
+        display: inline-block;
+        margin-bottom: 10px;
+        line-height: $font-size-m;
+
+        &.required::after {
+            content: '*';
+            color: $coral-red;
+        }
+    }
+
+    .link {
+        text-decoration: none;
+        color: $font-color-dark;
+        cursor: pointer;
+
+        &:hover {
+            color: $font-color-dark-hovered;
+        }
+    }
+
+    .map {
+        background-size: 100%;
+        background: url('/images/map-thumbnail.png') center;
+        border-radius: $rounding;
+        box-shadow: $shadow;
+        overflow: hidden;
+
+        .filter {
+            display: block;
+            padding: 20px;
+            background-color: transparentize($color: $emperor, $amount: 0.5);
+            text-decoration: none;
+            font-size: $font-size-l;
+            color: $white;
+
+            &:hover {
+                background-color: transparentize($color: $emperor, $amount: 0.4);
+            }
+
+            .address-component:not(:last-child) {
+                margin-right: 0.3em;
+
+                &::after {
+                    content: ',';
+                }
+            }
+        }
+    }
+}

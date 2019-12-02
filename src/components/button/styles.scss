@@ -1,0 +1,75 @@
+@import '../../common/styles/variables';
+
+.btn {
+    background: none;
+    border: none;
+    border-radius: $rounding;
+    box-shadow: $shadow;
+    font-weight: lighter;
+    user-select: none;
+    cursor: pointer;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+        outline: none;
+    }
+
+    &.medium {
+        height: 40px;
+        min-width: 80px;
+        padding: 0 25px;
+        font-size: $font-size-m;
+    }
+
+    &.small {
+        height: 26px;
+        padding: 0 13px;
+        font-size: $font-size-s;
+    }
+
+    &.flat {
+        box-shadow: none;
+    }
+
+    &.disabled {
+        opacity: 0.85;
+        cursor: default;
+
+        &.gray {
+            &:hover,
+            &:focus {
+                background-color: $button;
+                color: $button-content-color;
+            }
+        }
+
+        &.blue {
+            &:hover,
+            &:focus {
+                background-color: $CTA-button;
+                color: $CTA-button-content-color;
+            }
+        }
+    }
+
+    &.gray {
+        background-color: $button;
+        color: $button-content-color;
+
+        &:hover {
+            background-color: $button-hovered;
+            color: $button-content-color-hovered;
+        }
+    }
+
+    &.blue {
+        background-color: $CTA-button;
+        color: $CTA-button-content-color;
+
+        &:hover {
+            background-color: $CTA-button-hovered;
+            color: $CTA-button-content-color-hovered;
+        }
+    }
+}

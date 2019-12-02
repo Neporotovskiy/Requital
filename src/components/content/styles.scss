@@ -1,0 +1,7 @@
+@import '../../common/styles/variables';
+
+.layout {
+    margin: 0 auto;
+    width: $content-layout-width;
+    min-width: $content-layout-width;
+}

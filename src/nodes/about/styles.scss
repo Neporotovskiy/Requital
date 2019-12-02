@@ -1,0 +1,36 @@
+@import '../../common/styles/variables';
+
+.about {
+    color: $font-color-light;
+    overflow: hidden;
+    position: relative;
+
+    .background {
+        min-width: $content-layout-width;
+        width: calc(100% + 10px);
+        height: calc(100% + 10px);
+        background: $dark url('/images/background.jpg') no-repeat center center;
+        position: absolute;
+        transform: translate(-5px, -5px);
+        filter: blur(5px);
+        z-index: -1;
+    }
+
+    .filter {
+        width: 100%;
+        height: 100%;
+        background-color: transparentize($dark, 0.3);
+        padding: 50px 0;
+        box-sizing: border-box;
+
+        .achievements {
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none;
+
+            .achievement {
+                margin: 0;
+            }
+        }
+    }
+}

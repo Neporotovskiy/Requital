@@ -1,0 +1,53 @@
+@import '../../common/styles/variables';
+
+.footer {
+    background-color: $dark;
+    color: $font-color-light;
+
+    .links {
+        padding: 50px 0;
+        display: flex;
+        flex-wrap: wrap;
+
+        .column {
+            height: 100%;
+
+            &:not(:last-child) {
+                margin-right: 100px;
+            }
+
+            .column-name {
+                margin-bottom: 20px;
+                text-transform: uppercase;
+            }
+        }
+
+        .link-wrapper:not(:last-child) {
+            margin-bottom: 20px;
+        }
+
+        .link {
+            color: inherit;
+            font-size: $font-size-m;
+            text-decoration: none;
+            cursor: pointer;
+
+            &:hover {
+                color: $font-color-light-hovered;
+            }
+        }
+    }
+
+    .signs {
+        height: 50px;
+        border-top: 1px solid $dark-accent;
+
+        .signs-wrapper {
+            height: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: $font-size-m;
+        }
+    }
+}

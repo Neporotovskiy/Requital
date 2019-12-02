@@ -1,0 +1,50 @@
+@import '../../common/styles/variables';
+
+.menu {
+    width: 100%;
+    background: $dark;
+    box-shadow: $shadow;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 5;
+    color: $font-color-light;
+}
+
+.wrapper:not(:last-child) {
+    border-bottom: 1px solid $dark-accent;
+}
+
+.contacts,
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contacts {
+    height: 50px;
+
+    .link {
+        text-decoration: none;
+        color: inherit;
+
+        &.interactive:hover,
+        &.interactive:focus {
+            color: $font-color-light-hovered;
+        }
+    }
+}
+
+.navigation {
+    height: 70px;
+
+    .company {
+        margin: 0;
+        cursor: pointer;
+    }
+
+    .link:not(:last-child) {
+        margin-right: 15px;
+    }
+}
