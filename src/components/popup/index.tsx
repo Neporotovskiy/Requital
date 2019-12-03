@@ -36,16 +36,6 @@ export class Popup extends React.PureComponent<Props> {
 
     getMountingPoint = () => (typeof document !== 'undefined' ? document.getElementById('popup-mounting-point') : null);
 
-    enchanceChildren = children => {
-        return React.Children.map(children, child => {
-            const { onClose } = this.props;
-            if (child.type.name === 'Header') {
-                return React.cloneElement(child, { onClose });
-            }
-            return child;
-        });
-    };
-
     render(): React.ReactElement {
         const { visible, onClose, children } = this.props;
         const target = this.getMountingPoint();
@@ -53,7 +43,7 @@ export class Popup extends React.PureComponent<Props> {
             return ReactDOM.createPortal(
                 <div className={s.container}>
                     <div className={s.overlay} onClick={onClose} />
-                    <div className={s.popup}>{this.enchanceChildren(children)}</div>
+                    <div className={s.popup}>{children}</div>
                 </div>,
                 target,
             );

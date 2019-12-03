@@ -12,7 +12,7 @@ const PromotionPopup = ({ visible, onClose, detailsID }) => {
     return (
         <Popup visible={visible} onClose={onClose}>
             <div className={s.popup}>
-                <Popup.Header>{title}</Popup.Header>
+                <Popup.Header onClose={onClose}>{title}</Popup.Header>
                 <Popup.Content>
                     {description.map((paragraph: string, index: number) => (
                         <p key={`paragraph-${index}`}>{paragraph}</p>

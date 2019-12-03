@@ -91,7 +91,7 @@ const Projects: React.FunctionComponent = (): React.ReactElement => {
             </div>
             <Footer />
             <Popup visible={isPopupVisible} onClose={closePopup}>
-                <Popup.Header>Разместить проект</Popup.Header>
+                <Popup.Header onClose={closePopup}>Разместить проект</Popup.Header>
                 <Popup.Content className={s.popupContent}>
                     <p>Наш специалист свяжется с Вами чтобы получить данные проекта</p>
                     <Form type={REQUEST_TYPE.PROJECT_PLACEMENT_REQUEST} />

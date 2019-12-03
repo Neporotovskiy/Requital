@@ -107,7 +107,7 @@ export const Gallery = ({ children }) => {
                 </Content>
             </div>
             <Popup visible={popup.visible} onClose={closePopup}>
-                <Popup.Header>{popup.description}</Popup.Header>
+                <Popup.Header onClose={closePopup}>{popup.description}</Popup.Header>
                 <img className={s.openedIllustration} src={`/${popup.src}`} alt={popup.description} />
             </Popup>
         </div>
@@ -208,7 +208,7 @@ const Project: NextComponentType<NextPageContext, Detailed, Detailed> = ({
             </Description>
             <Footer />
             <Popup visible={isPopupVisible} onClose={closePopup}>
-                <Popup.Header>Оформить заказ</Popup.Header>
+                <Popup.Header onClose={closePopup}>Оформить заказ</Popup.Header>
                 <Popup.Content className={s.popupContent}>
                     <p>Наш специалист свяжется с Вами и поможет оформить заявку на реализацию проекта "{name}"</p>
                     <Form type={REQUEST_TYPE.ORDER_VIA_PROJECT} meta={name} />

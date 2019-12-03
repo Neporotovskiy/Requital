@@ -184,7 +184,7 @@ export class Quiz extends PureComponent<Props, State> {
             <Fragment>
                 {children(this.open)}
                 <Popup visible={visible} onClose={this.close}>
-                    <Popup.Header>Расчет приблизительной стоимости строительства</Popup.Header>
+                    <Popup.Header onClose={this.close}>Расчет приблизительной стоимости строительства</Popup.Header>
                     {this.content(
                         ({ loaded, onStart }): React.ReactElement => (
                             <React.Fragment>
