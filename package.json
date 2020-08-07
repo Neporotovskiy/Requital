@@ -1,5 +1,5 @@
 {
-    "name": "zombie",
+    "name": "requital",
     "scripts": {
         "dev": "next dev",
         "build": "next build",
